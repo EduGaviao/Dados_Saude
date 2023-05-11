@@ -117,36 +117,40 @@ Após a análise teórica, foram propostas duas questões de pesquisa, sendo:
 Entretando como ainda há limitações a cerca das bases de dados existentes, optou-se por lidar apenas com a primeira questão, focando em identificar uma associação entre os níveis de vitamina D e a gravidade da doença em pacientes com COVID-19.
 
 # Metodologia
-Após ter sido definida a questão de pesquisa, se faz necessário a definição de campos fundamentais para a realização do projeto, tais como, a base de dados, as ferramentas e as técnicas de análise exploratória.
+Após ter sido definida a questão de pesquisa, se faz necessário a definição de campos fundamentais para a realização do projeto, tais como, a base de dados, as ferramentas e as técnicas de análise exploratória. O fluxo seguido para implementação do projeto pode ser visto na Figura 1.
 
+### Figura 1- Fluxograma de Processos
 
-## Base de Dados e Evolução
-  Com base nos artigos relacionados a temática, duas vertentes metodológicas serão implementadas. Uma partindo da análise estatística, em que variáveis contínuas terão media, desvio padrão, mediana e variância como parâmetros, enquanto as qualitativas serão representadas por frequências e percentis. Em contramão, a análise em rede também será aplicada, a fim de encontrar padrões de comunicação entre formas graves da doença COVID-19 e os níveis de deficiência e insuficiência de vitamina D.
+![Figura 1](metodologia.png)
+
+Fonte: Autores(2023)
 
 ## Bases de Dados e Evolução
-Afim de responder as questões de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na tabela abaixo:
+Afim de responder a questão de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na tabela abaixo:
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Breve resumo (duas ou três linhas) sobre a base.
-Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Breve resumo (duas ou três linhas) sobre a base.
-No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Breve resumo (duas ou três linhas) sobre a base.
+Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Base de dados pública fornecida pelo [artigo](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263069).  Os dados clínicos foram coletados durante a internação hospitalar no Galilee Medical Center, contendo informações como: duração da hospitalização, gravidade da doença, mortalidade, comorbidades e nível de 25(OH)D de cada paciente.
+Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Base contendo 240 pacientes hospitalizados com COVID-19 no Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo e no hospital de campanha do Ibirapuera. Dados com caracterização demográfica abrangente, ou seja, diversas raças/etnias. Pacientes foram divididos igualmente, para receber a vitamina D3 ou placebo.
+No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Base de dados não pública, coletada pelo Grupo Fleury. 14.692 indivíduos que realizaram testes de RT-PCR para diagnóstico de COVID-19 e que também tiveram o 25(OH)D medidos. 
 
 ## Bases Estudadas mas Não Adotadas
-Afim de responder as questões de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na tabela abaixo:
+
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Breve resumo (duas ou três linhas) sobre a base.
 No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Breve resumo (duas ou três linhas) sobre a base.
 
 ## Base Selecionada
-Afim de responder as questões de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na tabela abaixo:
+
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Breve resumo (duas ou três linhas) sobre a base.
 
 ## Análise Exploratória
 
-# Ferramentas
+Com base nos artigos relacionados a temática, duas vertentes metodológicas serão implementadas. Uma partindo da análise estatística, em que variáveis contínuas terão media, desvio padrão, mediana e variância como parâmetros, enquanto as qualitativas serão representadas por frequências e percentis. Em contramão, a análise em rede também será aplicada, a fim de encontrar padrões de comunicação entre formas graves da doença COVID-19 e os níveis de deficiência e insuficiência de vitamina D.
+
+## Ferramentas
  Por conter um vasto conjunto de bibliotecas estatísticas, gráficas e numéricas, optou-se pela utilização da ferramenta Python, que além da implementação mais "simplificada" faz parte do conhecimento de todos os participantes do projeto.
 
 # Cronograma
