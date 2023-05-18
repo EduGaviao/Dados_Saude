@@ -132,19 +132,20 @@ Base de Dados | Endereço na Web | Resumo descritivo
 Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Base de dados pública fornecida pelo [artigo](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263069).  Os dados clínicos foram coletados durante a internação hospitalar no Galilee Medical Center, contendo informações como: duração da hospitalização, gravidade da doença, mortalidade, comorbidades e nível de 25(OH)D de cada paciente.
 Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Base contendo 240 pacientes hospitalizados com COVID-19 no Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo e no hospital de campanha do Ibirapuera. Dados com caracterização demográfica abrangente, ou seja, diversas raças/etnias. Pacientes foram divididos igualmente, para receber a vitamina D3 ou placebo.
 No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Base de dados não pública, coletada pelo Grupo Fleury. 14.692 indivíduos que realizaram testes de RT-PCR para diagnóstico de COVID-19 e que também tiveram o 25(OH)D medidos. 
-
+UK Biobank | [Dataset 4](https://www.ukbiobank.ac.uk) | O UK Biobank é um banco de dados biomédico, contendo informações genéticas e de saúde detalhadas de meio milhão de participantes do Reino Unido. O banco de dados é regularmente atualizado com dados adicionais e está acessível mundialmente para pesquisadores aprovados que conduzem estudos essenciais sobre doenças comuns e potencialmente fatais.
 ## Bases Estudadas mas Não Adotadas
 
-Base de Dados | Endereço na Web | Resumo descritivo
+Base de Dados | Endereço na Web | Motivo da Exclusão
 ----- | ----- | -----
-Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Breve resumo (duas ou três linhas) sobre a base.
-No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Breve resumo (duas ou três linhas) sobre a base.
+Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Não adotada pois não foi obtido resposta por parte dos pesquisadores sobre o fornecimento dos dados, além disso a base tratava da aplicação de doses de vitamina D em indivíduos hospitalizados por COVID-19.
+No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | A Base não foi selecionada uma vez que apresentava somente a informação de indivíduos que realizaram testes de RT-PCR para diagnóstico de COVID-19 e que também tiveram o 25(OH)D medidos, sem nenhum dado sobre nível pré-infecção ou gravidade hospitalar.
+UK Biobank | [Dataset 4](https://www.ukbiobank.ac.uk) | O UK Biobank não foi adotado em nosso estudo, pois os Centros de avaliação selecionados não possuíam informações sobre os níveis de vitamina D pré-infecção.
 
 ## Base Selecionada
 
-Base de Dados | Endereço na Web | Resumo descritivo
+Base de Dados | Endereço na Web | Motivo da Seleção
 ----- | ----- | -----
-Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Breve resumo (duas ou três linhas) sobre a base.
+Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Mesmo não se tratando de uma base Brasileira, optou-se por seleciona-la, já que contava com todos os parâmetros necessários para análise. Desde os níveis de vitamina D pré-infecção, até a gravidade da doença em cada indivíduo. 
 
 ## Análise Exploratória
 
