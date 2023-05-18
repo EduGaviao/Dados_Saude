@@ -338,7 +338,9 @@ Com base nos artigos relacionados a temática, duas vertentes metodológicas ser
 
 # Trabalhos Futuros
 Clusterização das variaveis.
+
 Predição do desfecho, cria o modelo pela base que selecionamos e testa em outra.
+
 Associação com variáveis de confusão, IMC, Idade e etc...
 # Referências
 
