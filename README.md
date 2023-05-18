@@ -342,6 +342,9 @@ Clusterização das variaveis.
 Predição do desfecho, cria o modelo pela base que selecionamos e testa em outra.
 
 Associação com variáveis de confusão, IMC, Idade e etc...
+
+Teste de normalidade.
+
 # Referências
 
 AKBAR, M. R. et al. Low Serum 25-hydroxyvitamin D (Vitamin D) Level Is Associated With Susceptibility  to COVID-19, Severity, and Mortality: A Systematic Review and Meta-Analysis.Frontiers in nutritionSwitzerland, 2021. 
