@@ -5,6 +5,8 @@
 
 O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [*Ciência e Visualização de Dados em Saúde*](https://github.com/datasci4health/home), oferecida no primeiro semestre de 2023, na Unicamp.
 
+### Tabela 1- Equipe
+
  |Nome  | RA | Especialização|
  |--|--|--|
  | Carla Regina da Silva Corrêa da Ronda  | 265769  | Saúde|
@@ -12,6 +14,8 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
  | Leonardo de Queiroz Borges  | 177829  | Computação
  | Maurício Pereira Lopes  | 225242  | Computação - Líder Github - conta: [*mauricioplopes*](https://github.com/mauricioplopes/projects2023)|
  | Miguel Angel Gaybor Murillo  | 252040  | Elétrica|
+ 
+ Fonte: Autores(2023)
 
 
 # Descrição Resumida do Projeto
@@ -126,30 +130,73 @@ Após ter sido definida a questão de pesquisa, se faz necessário a definição
 Fonte: Autores(2023)
 
 ## Bases de Dados e Evolução
-Afim de responder a questão de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na tabela abaixo:
+Afim de responder a questão de pesquisa algumas bases foram pré-selecionadas e análisadas, e podem ser visualizadas na Tabela 2.
+
+### Tabela 2- Bases de dados previamente selecionadas
+
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Base de dados pública fornecida pelo [artigo](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263069).  Os dados clínicos foram coletados durante a internação hospitalar no Galilee Medical Center, contendo informações como: duração da hospitalização, gravidade da doença, mortalidade, comorbidades e nível de 25(OH)D de cada paciente.
 Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Base contendo 240 pacientes hospitalizados com COVID-19 no Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo e no hospital de campanha do Ibirapuera. Dados com caracterização demográfica abrangente, ou seja, diversas raças/etnias. Pacientes foram divididos igualmente, para receber a vitamina D3 ou placebo.
 No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | Base de dados não pública, coletada pelo Grupo Fleury. 14.692 indivíduos que realizaram testes de RT-PCR para diagnóstico de COVID-19 e que também tiveram o 25(OH)D medidos. 
 UK Biobank | [Dataset 4](https://www.ukbiobank.ac.uk) | O UK Biobank é um banco de dados biomédico, contendo informações genéticas e de saúde detalhadas de meio milhão de participantes do Reino Unido. O banco de dados é regularmente atualizado com dados adicionais e está acessível mundialmente para pesquisadores aprovados que conduzem estudos essenciais sobre doenças comuns e potencialmente fatais.
+
+Fonte: Autores(2023)
+
 ## Bases Estudadas mas Não Adotadas
 
+Para o presente estudo um pré-requisito para seleção do dataset era os níves de vitamina D pré-infecção por COVID-19, como nem todos continham a informação requerida, tiveram que ser desconsiderados. As bases não utilizadas podem ser vistas na Tabela 3, que também menciona o motivo para ter sido retirada do estudo. 
+
+### Tabela 3- Bases de dados desconsideradas
 Base de Dados | Endereço na Web | Motivo da Exclusão
 ----- | ----- | -----
 Effect of a Single High Dose of Vitamin D3 on Hospital Length of Stay in Patients With Moderate to Severe COVID-19 | [Dataset 2](https://jamanetwork.com/journals/jama/fullarticle/2776738) | Não adotada pois não foi obtido resposta por parte dos pesquisadores sobre o fornecimento dos dados, além disso a base tratava da aplicação de doses de vitamina D em indivíduos hospitalizados por COVID-19.
 No association between vitamin D status and COVID-19 infection in São Paulo, Brazil | [Dataset 3](https://www.scielo.br/j/aem/a/V9XTjvzvHk6qLDXLX8dzMJR/?lang=en#) | A Base não foi selecionada uma vez que apresentava somente a informação de indivíduos que realizaram testes de RT-PCR para diagnóstico de COVID-19 e que também tiveram o 25(OH)D medidos, sem nenhum dado sobre nível pré-infecção ou gravidade hospitalar.
 UK Biobank | [Dataset 4](https://www.ukbiobank.ac.uk) | O UK Biobank não foi adotado em nosso estudo, pois os Centros de avaliação selecionados não possuíam informações sobre os níveis de vitamina D pré-infecção.
 
+Fonte: Autores(2023)
+
 ## Base Selecionada
 
+Afim de responder a questão de pesquisa previamente estipulada, uma base de dados foi selecionada para dar sequência ao projeto e pode ser vista na Tabela 4, que além do link de acesso também apresenta a justificativa para a devida inclusão.
+
+### Tabela 4- Base Selecionada
 Base de Dados | Endereço na Web | Motivo da Seleção
 ----- | ----- | -----
 Pre-infection 25-hydroxyvitamin D3 levels and association with severity of COVID-19 illness Amiel A. Dror | [Dataset 1](https://doi.org/10.1371/journal.pone.0263069.s001) | Mesmo não se tratando de uma base Brasileira, optou-se por seleciona-la, já que contava com todos os parâmetros necessários para análise. Desde os níveis de vitamina D pré-infecção, até a gravidade da doença em cada indivíduo. 
 
-## Análise Exploratória
+Fonte: Autores(2023)
 
-Com base nos artigos relacionados a temática, duas vertentes metodológicas serão implementadas. Uma partindo da análise estatística, em que variáveis contínuas terão media, desvio padrão, mediana e variância como parâmetros, enquanto as qualitativas serão representadas por frequências e percentis. Em contramão, a análise em rede também será aplicada, a fim de encontrar padrões de comunicação entre formas graves da doença COVID-19 e os níveis de deficiência e insuficiência de vitamina D.
+## Análise Exploratória
+A base de dados conta com 253 amostras de pacientes infectados por COVID-19 (confirmados por PCR) e internados no Galilee Medical Center (GMC) entre 7 de abril de 2020 e 4 de fevereiro de 2021 . Pacientes menores de 18 anos foram excluídos da criação da base de dados. 
+Diversos parâmetros foram adotados para a criação do dataset, desde dados básicos como genêro e idade, até dados específicos do prontuário do paciente, como comorbidades associadas, nível de 25(OH)D, gravidade durante a internação e entre outros. A Tabela 4 explicita um guia com a explicação de todas as variáveis utilizadas, juntamente com as subcategorias, aplicadas durante a análise. 
+
+### Tabela 5- Dicionário 
+|Nome Variável | Significado | Sub Categorias|
+ |--|--|--|
+ | Patient  | Identificador anônimo do Paciente  |  |
+ | Age Group  | Grupos de Idade | 1= Pacientes com idade inferior a 50 <br /> 2= Pacientes com idade entre 50 e 64 anos <br /> 3= Pacientes com idade acima dos 65 anos. |
+ | Gender  | Genêro  | 0 = Feminino <br /> 1 = Masculino |
+ | Religion  | Religião  | 1 = Judeu <br /> 2 = Árabe muçulmano <br /> 3 = Árabe Cristão <br /> 4 = Druzo <br />5 = Cristão <br /> 6 = Outra|
+ | Maximal degree of severity during hospitalization  | Refere-se ao grau de gravidade durante a internação  | 0 = Leve <br /> 1 = Moderado <br /> 2 = Grave  <br /> 3 = Crítico|
+ | BMI | Índice de massa corporal  | 0 = Menor que 30 <br /> 1 = Maior que 30|
+ | Date of 25(OH)D test| Data da realização do exame de vitamina D  | |
+ | Month of 25(OH)D examination| Mês da realização do exame de vitamina D  | |
+ | Month of hospitalization in corona dep.| Mês de internação no departamento de COVID | |
+ | Death during hospitalization| Indica se o paciente foi ou não a óbito| 0 = Não <br /> 1 = Sim <br />|
+ | COPD | Doença pulmonar obstrutiva crônica | 0 = Não <br /> 1 = Sim <br /> |
+ | CHF | Insuficiência cardíaca congestiva | 0 = Não <br /> 1 = Sim <br /> |
+ | CIHD |Doença Cardíaca Isquêmica Crônica | 0 = Não <br /> 1 = Sim <br /> |
+ | HTN |Hipertensão | 0 = Não <br /> 1 = Sim <br /> |
+ | CRF | Insuficiência Renal Crônica | 0 = Não <br /> 1 = Sim <br /> |
+ | DM |Diabetes Mellitus | 0 = Não <br /> 1 = Sim <br /> |
+ | Hospitalization length (days)| Indica a quantidade de dias que o paciente passou hospitalizado| |
+ | Pre-infection 25(OH)D level (ng/mL)| Nível de 25(OH)D pré-infecção (ng/mL) obtido do prontuário do paciente| 1 = <=19.99 <br /> 2 =  20-29.99 <br /> 3 = 30-39.99 <br /> 4 = 40+|
+ 
+ Fonte: Autores(2023)
+ 
+Métricas como média, desvio padrão, mediana e moda foram calculados dos indices de idade e dos níveis de 25(OH) D pré-infecção, afim de se obter mais informações para as avaliações e para diferenciar os comportamentos entre amostras.
+ 
 
 ## Ferramentas
  Por conter um vasto conjunto de bibliotecas estatísticas, gráficas e numéricas, optou-se pela utilização da ferramenta Python, que além da implementação mais "simplificada" faz parte do conhecimento de todos os participantes do projeto.
