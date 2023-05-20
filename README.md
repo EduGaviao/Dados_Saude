@@ -195,8 +195,48 @@ Diversos parâmetros foram adotados para a criação do dataset, desde dados bá
  
  Fonte: Autores(2023)
  
-Métricas como média, desvio padrão, mediana e moda foram calculados dos indices de idade e dos níveis de 25(OH) D pré-infecção, afim de se obter mais informações para as avaliações e para diferenciar os comportamentos entre amostras.
+Antes de iniciar de fato a análise dos dados, algumas manipulações foram feitas. Linhas com o caracter * e com NaN foram removidas da base, afim de trabalhar apenas com  as informações totalmente preenchidas. A Tabela 6 apresenta as métricas antes e após as manipulações. 
+
+### Tabela 6- Resumo das Dimensões
+| | Linhas | Colunas| % Alterada|
+ |--|--|--|--|
+ |Antes| 253| 25 | 0% |
+ |Depois|246 | 25 | 2.77% |
+
+ Fonte: Autores(2023)
  
+Métricas como média, desvio padrão, mediana e moda foram calculados dos indices de 25(OH) D pré-infecção, afim de se obter mais informações para as avaliações e para diferenciar os comportamentos entre amostras. As medidas obtidas podem ser vistas na Tabela 7, em que, além do cálculo geral, amostras foram divididas de acordo com o grau de gravidade durante a internação e as variáveis foram calculadas novamente.
+
+### Tabela 7- Medidas Estatísticas
+|Amostra | Média | Desvio Padrão| Moda | Mediana|
+ |--|--|--|--|--|
+ | Geral | 26.138|19.995 | 10.0| 19.25|
+ | Grau de Gravidade -Leve | 38.589|15.430 | 34.2|34.2 |
+ | Grau de Gravidade -Moderado | 25.570|23.224 | 15.1| 18.95|
+ | Grau de Gravidade -Grave |15.307 |11.907 | 10.0| 11.3|
+ | Grau de Gravidade -Crítico | 10.8923| 4.266|10.0 |10.0 |
+  
+ Fonte: Autores(2023)
+ 
+Em seguida para análises de correlação, foram calculados os p-valores utilizando do teste de Wilcoxon (duas amostras independentes) afim de comparar os valores de 25(OH)D pré-infecção entre as categorias de gravidade da doença COVID-19. A Tabela 8 demonstra os valores obtidos na comparação entre as amostras de Leve e moderado, moderado e grave, e grave e crítico. Uma diferença significativa no nível de 25(OH)D foi encontrada entre as categorias de doença leve em comparação com moderada (p < 0.001) e moderada em comparação com grave (p < 0.002). Não foi observada diferença entre indivíduos graves e críticos em relação à 25(OH)D (p = 0.04). 
+
+### Tabela 8- P-valor Wilcoxon rank-sum test
+|Amostra | p-valor|
+ |--|--|
+ | Leve-Moderado | p-value<0.0001 |
+ | Moderado-Grave | p-value<0.0002 |
+ | Grave-Crítico |p-value=0.04|
+ 
+ Fonte: Autores(2023)
+ 
+Afim de verificar a posição dos dados, simetria e dispersão um Box Plot foi plotado e pode ser visto na Figura 3. Por meio dele, é possível visualizar a distribuição de dados com base em mínimo, primeiro quartil (Q1), mediana, terceiro quartil(Q3) e o máximo.
+
+### Figura 3- Box Plot 25(OH)D pré-infecção X Gravidade da doença COVID-19
+
+![Figura 2](box.png)
+
+Fonte: Autores(2023)
+
 
 ## Ferramentas
  Por conter um vasto conjunto de bibliotecas estatísticas, gráficas e numéricas, optou-se pela utilização da ferramenta Python, que além da implementação mais "simplificada" faz parte do conhecimento de todos os participantes do projeto.
