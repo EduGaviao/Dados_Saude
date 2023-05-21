@@ -5,6 +5,28 @@
 
 O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [*Ciência e Visualização de Dados em Saúde*](https://github.com/datasci4health/home), oferecida no primeiro semestre de 2023, na Unicamp.
 
+# Sumário 
+<!--ts-->
+   * Equipe
+   * Descrição Resumida
+   * Referêncial Teórico
+      * Metabolismo Endógeno da Vitamina D
+      * Metabolismo e Ação Local da Vitamina D
+      * Papel da vitamina D na função imunológica
+      * Vitamina D e COVID-19
+   * Perguntas de Pesquisa
+   * Metodologia
+      * Base de Dados e Evolução
+      * Bases Estudadas mas Não Adotadas
+      * Base Selecionada
+      * Análise Exploratória
+      * Ferramentas
+   * Cronograma
+   * Análises Futuras
+   * Referências
+<!--te-->
+
+# Equipe
 ### Tabela 1- Equipe
 
  |Nome  | RA | Especialização|
@@ -19,6 +41,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 
 # Descrição Resumida do Projeto
+
  A COVID-19 é uma doença infecciosa, causada pelo vírus SARS-CoV-2, um novo tipo de coronavírus que se apresenta com amplo espectro de desfechos clínicos, que vão desde quadros assintomáticos, passando por sintomas leves ou moderados do trato respiratório superior, até a condição de síndrome respiratória aguda grave (SRAG), que pode levar à falência de múltiplos órgãos, culminando em morte.
 
  Estudos mostraram que idosos e pessoas com comorbidades como diabetes mellitus, doenças cardiovasculares, hipertensão arterial e doenças respiratórias crônicas são mais suscetíveis a desenvolver formas graves da doença COVID-19.
@@ -169,9 +192,29 @@ Fonte: Autores(2023)
 
 ## Análise Exploratória
 A base de dados conta com 253 amostras de pacientes infectados por COVID-19 (confirmados por PCR) e internados no Galilee Medical Center (GMC) entre 7 de abril de 2020 e 4 de fevereiro de 2021 . Pacientes menores de 18 anos foram excluídos da criação da base de dados. 
+
+A Figura 2 apresenta o fluxo de trabalho adotado durante o processo da análise exploratório, onde primeiro houve a preparação da base, a criação de um dicionário, para posteriormente realizar a extração das informações. 
+
+### Figura 2- Fluxo de Trabalho da Análise 
+
+![Figura 2](metodologia (2).png)
+
+Fonte: Autores(2023)
+
+Antes de iniciar de fato a análise dos dados, algumas manipulações foram feitas. Linhas com o caracter * e com NaN foram removidas da base, afim de trabalhar apenas com  as informações totalmente preenchidas. A Tabela 6 apresenta as métricas antes e após as manipulações. 
+
+### Tabela 5- Resumo das Dimensões
+| | Linhas | Colunas| % Alterada|
+ |--|--|--|--|
+ |Antes| 253| 25 | 0% |
+ |Depois|246 | 25 | 2.77% |
+
+ Fonte: Autores(2023)
+
 Diversos parâmetros foram adotados para a criação do dataset, desde dados básicos como genêro e idade, até dados específicos do prontuário do paciente, como comorbidades associadas, nível de 25(OH)D, gravidade durante a internação e entre outros. A Tabela 4 explicita um guia com a explicação de todas as variáveis utilizadas, juntamente com as subcategorias, aplicadas durante a análise. 
 
-### Tabela 5- Dicionário 
+
+### Tabela 6- Dicionário 
 |Nome Variável | Significado | Sub Categorias|
  |--|--|--|
  | Patient  | Identificador anônimo do Paciente  |  |
@@ -195,16 +238,6 @@ Diversos parâmetros foram adotados para a criação do dataset, desde dados bá
  
  Fonte: Autores(2023)
  
-Antes de iniciar de fato a análise dos dados, algumas manipulações foram feitas. Linhas com o caracter * e com NaN foram removidas da base, afim de trabalhar apenas com  as informações totalmente preenchidas. A Tabela 6 apresenta as métricas antes e após as manipulações. 
-
-### Tabela 6- Resumo das Dimensões
-| | Linhas | Colunas| % Alterada|
- |--|--|--|--|
- |Antes| 253| 25 | 0% |
- |Depois|246 | 25 | 2.77% |
-
- Fonte: Autores(2023)
- 
 Métricas como média, desvio padrão, mediana e moda foram calculados dos indices de 25(OH) D pré-infecção, afim de se obter mais informações para as avaliações e para diferenciar os comportamentos entre amostras. As medidas obtidas podem ser vistas na Tabela 7, em que, além do cálculo geral, amostras foram divididas de acordo com o grau de gravidade durante a internação e as variáveis foram calculadas novamente.
 
 ### Tabela 7- Medidas Estatísticas
@@ -224,25 +257,40 @@ Em seguida para análises de correlação, foram calculados os p-valores utiliza
 |Amostra | p-valor|
  |--|--|
  | Leve-Moderado | p-value<0.0001 |
- | Moderado-Grave | p-value<0.0002 |
+ | Moderado-Grave | p-value<0.0001 |
  | Grave-Crítico |p-value=0.04|
  
  Fonte: Autores(2023)
  
-Afim de verificar a posição dos dados, simetria e dispersão um Box Plot foi plotado e pode ser visto na Figura 3. Por meio dele, é possível visualizar a distribuição de dados com base em mínimo, primeiro quartil (Q1), mediana, terceiro quartil(Q3) e o máximo.
+Afim de verificar a posição dos dados, simetria e dispersão um Box Plot foi plotado e pode ser visto na Figura 3. Por meio dele, é possível visualizar a distribuição de dados com base em mínimo, primeiro quartil (Q1), mediana, terceiro quartil(Q3) e o máximo, com as métricas apresentadas é possível notar uma diminuição progressiva nos níveis de 25(OH)D à medida que a gravidade da doença aumenta. 
 
 ### Figura 3- Box Plot 25(OH)D pré-infecção X Gravidade da doença COVID-19
 
-![Figura 2](box.png)
+![Figura 3](box.png)
 
 Fonte: Autores(2023)
 
 
 ## Ferramentas
  Por conter um vasto conjunto de bibliotecas estatísticas, gráficas e numéricas, optou-se pela utilização da ferramenta Python, que além da implementação mais "simplificada" faz parte do conhecimento de todos os participantes do projeto.
+ As bibliotecas utilizadas para implementação e análises estão dispostas na Tabela 9.
 
+### Tabela 9- Bibliotecas Utilizadas
+ |Nome | Utilização|
+ |--|--|
+ | statistics | Utilizada para calcular média, moda, desvio padrão, e mediana dos conjuntos |
+ | numpy | Utilizada para cálculos básicos e para manipulação de vetores |
+ | matplotilib | Utilizada para plotar gráficos simples|
+ | seaborn | Utilizada para plotar gráficos estatísticos variados|
+ 
+ Fonte: Autores(2023)
+ 
+
+ 
+ 
 # Cronograma
  
+### Tabela 10- Divisão das Atividades
 <table>
 <thead>
   <tr>
@@ -423,14 +471,16 @@ Fonte: Autores(2023)
 </tbody>
 </table>
 
-# Trabalhos Futuros
-Clusterização das variaveis.
+Fonte: Autores(2023)
 
-Predição do desfecho, cria o modelo pela base que selecionamos e testa em outra.
+# Análises Futuras
 
-Associação com variáveis de confusão, IMC, Idade e etc...
-
-Teste de normalidade.
+Afim de verificar outras informações e realizar análises pertinentes a base estudada, alguns tópicos foram estipulados para entrega futura, dentre eles estão:
+<!--ts-->
+   * Predição do desfecho
+   * Clusterização das Variáveis
+   * Análises das variáveis de confusão
+<!--te-->
 
 # Referências
 
