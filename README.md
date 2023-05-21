@@ -193,11 +193,11 @@ Fonte: Autores(2023)
 ## Análise Exploratória
 A base de dados conta com 253 amostras de pacientes infectados por COVID-19 (confirmados por PCR) e internados no Galilee Medical Center (GMC) entre 7 de abril de 2020 e 4 de fevereiro de 2021 . Pacientes menores de 18 anos foram excluídos da criação da base de dados. 
 
-A Figura 2 apresenta o fluxo de trabalho adotado durante o processo da análise exploratório, onde primeiro houve a preparação da base, a criação de um dicionário, para posteriormente realizar a extração das informações. 
+A Figura 2 apresenta o fluxo de trabalho adotado durante o processo da análise exploratória, em que, primeiro houve a preparação da base, a criação de um dicionário, para posteriormente realizar a extração das informações. 
 
 ### Figura 2- Fluxo de Trabalho da Análise 
 
-![Figura 2](metodologia (2).png)
+![Figura 2](fluxo.png)
 
 Fonte: Autores(2023)
 
@@ -211,7 +211,7 @@ Antes de iniciar de fato a análise dos dados, algumas manipulações foram feit
 
  Fonte: Autores(2023)
 
-Diversos parâmetros foram adotados para a criação do dataset, desde dados básicos como genêro e idade, até dados específicos do prontuário do paciente, como comorbidades associadas, nível de 25(OH)D, gravidade durante a internação e entre outros. A Tabela 4 explicita um guia com a explicação de todas as variáveis utilizadas, juntamente com as subcategorias, aplicadas durante a análise. 
+Diversos parâmetros foram adotados para a criação do dataset, desde dados básicos como genêro e idade, até dados específicos do prontuário do paciente, como comorbidades associadas, nível de 25(OH)D, gravidade durante a internação e entre outros. A Tabela 6 explicita um guia com a explicação de todas as variáveis utilizadas, juntamente com as subcategorias, aplicadas durante a análise. 
 
 
 ### Tabela 6- Dicionário 
@@ -237,7 +237,43 @@ Diversos parâmetros foram adotados para a criação do dataset, desde dados bá
  | Pre-infection 25(OH)D level (ng/mL)| Nível de 25(OH)D pré-infecção (ng/mL) obtido do prontuário do paciente| 1 = <=19.99 <br /> 2 =  20-29.99 <br /> 3 = 30-39.99 <br /> 4 = 40+|
  
  Fonte: Autores(2023)
- 
+
+
+Algumas informações prévias podem ser retiradas do dataset, tais como predominância de idade, o percentual que cada nível de gravidade representa, os índices de vitamina D de acordo com a religião e a relação entre os níveis 25(OH) D e o número de mortos. 
+Primeiramente analizando a faixa etária da base, há um número maior de pessoas de ambos os gêneros com idade acima de ">64", como pode ser visto no Gráfico 1.
+
+### Gráfico 1- Distribuição dos Pacientes por Faixa Etária e Gênero 
+
+![Figura 4](distribuicao.png)
+
+Fonte: Autores(2023)
+
+Em relação ao gravidade dos casos, há uma soberania em casos de grau moderado, entretando casos graves e críticos, quando juntos, correspondem a cerca de 1/3 das
+amostras, como demonstrado no Gráfico 2.
+
+### Gráfico 2- Gravidade Durante Hospitalização
+
+![Figura 5](gravidade.png)
+
+Fonte: Autores(2023)
+
+Com relação aos índices de vitamina D, pode-se observar que, na maioria dos casos, eles são inferiores a "19,99" para todos os tipos de religião. Vale ressaltar que como não trata-se de uma base brasileira, considerou-se religião um critério importante, dado que para produzir vitamina D, o ideal é tomar sol  com o máximo de partes do corpo expostas, e sabe-se que religiões muçulmanas fazem o uso de roupas que cobrem grande parte do corpo, sendo assim, trata-se de uma variável relevante para este dataset. 
+
+### Gráfico 3- Distribuição dos Níveis de 25(OH)D pré-infecção X Religião
+
+![Figura 6](religiao.png)
+
+Fonte: Autores(2023)
+
+A maioria dos pacientes presentes na base não foi a óbito durante a hospitalização, no entanto, para valores abaixo de "19,99", o
+número de mortes é considerável em comparação com o restante das categorias.
+
+### Gráfico 4- Relação dos Níveis de 25(OH)D pré-infecção X Morte Durante Hospitalização
+
+![Figura 7](morte.png)
+
+Fonte: Autores(2023)
+
 Métricas como média, desvio padrão, mediana e moda foram calculados dos indices de 25(OH) D pré-infecção, afim de se obter mais informações para as avaliações e para diferenciar os comportamentos entre amostras. As medidas obtidas podem ser vistas na Tabela 7, em que, além do cálculo geral, amostras foram divididas de acordo com o grau de gravidade durante a internação e as variáveis foram calculadas novamente.
 
 ### Tabela 7- Medidas Estatísticas
@@ -270,6 +306,22 @@ Afim de verificar a posição dos dados, simetria e dispersão um Box Plot foi p
 
 Fonte: Autores(2023)
 
+A correlação entre variáveis pode ser vista na Figura 4, em que, a hipertensão HTN e COPDapresentam uma alta correlação em nossos dados. Isso sugere que há uma associação significativa entre essas duas condições crônicas. Fatores como tabagismo, obesidade e problemas de saúde em geral podem contribuir para o desenvolvimento e a progressão de ambas as doenças.
+
+### Figura 4- Correlação entre Variáveis
+
+![Figura 9](eda.png)
+
+Fonte: Autores(2023)
+
+Um modelo de regressão linear múltipla foi aplicado com todas as variáveis, obtendo-se uma baixa explicação do
+modelo; no entanto, a remoção de algumas variantes atingiu uma eficácia de 65%. A Figura 5 apresenta a saída obtida para o melhor resultado. 
+
+### Figura 5- Regressão Linear Múltipla
+
+![Figura 10](saida.png)
+
+Fonte: Autores(2023)
 
 ## Ferramentas
  Por conter um vasto conjunto de bibliotecas estatísticas, gráficas e numéricas, optou-se pela utilização da ferramenta Python, que além da implementação mais "simplificada" faz parte do conhecimento de todos os participantes do projeto.
